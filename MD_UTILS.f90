@@ -12,6 +12,7 @@ MODULE MD_UTILS
         REAL(KIND=DP), INTENT(IN) :: cell_size
 
         REAL(KIND=DP) :: d, halfbox
+        REAL(KIND=DP) :: res
 
         halfbox = 2.0/cell_size
 
@@ -31,6 +32,8 @@ MODULE MD_UTILS
         INTEGER :: io
         CHARACTER*200 :: inputline
         INTEGER :: n_line
+        INTEGER :: res
+
         n_line = 0
         DO
             READ(filein,*, IOSTAT=io) inputline
